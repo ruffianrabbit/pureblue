@@ -1,4 +1,5 @@
 INCLUDE walkmemory.ink
+# theme: dark
 # author: ruffianrabbit
 # title: Pure Blue
 
@@ -20,6 +21,7 @@ VAR memory_bank_active = false
 VAR virus_removed = false
 VAR romance = false
 VAR stolen_data = false
+VAR arm_clues = false
 
 // Issue Tracking
 VAR issue_lovesys = false
@@ -60,9 +62,9 @@ VAR file_2 = false //TODO
 VAR q_leg_injury = false
 VAR q_who_savin = false
 
-* <center>⚠ QUARANTINE ACTIVE. ⚠ </center>
+* <center><< QUARANTINE ACTIVE. >> </center>
 -<>
-* <center>⚠ SYSTEM RECOVERY ENGAGING... ⚠ </center>
+* <center><< SYSTEM RECOVERY ENGAGING... >> </center>
 -> start
 // -> ending.hacked_end //debug
 
@@ -93,7 +95,7 @@ A voice cuts in and out from somewhere nearby. It's dark. Not just lights-off da
 + "My <i>head</i>[."]," you try to say, but though you feel your mouth move, nothing comes out.
 + Stay silent.
 
-- "Oh. Oh, I forgot!" the voice says. "The blue light means you need a manual interface reset, right? Uh..."
+- "Oh. Oh, god, I nearly forgot!" the voice says. "The blue light means you need a manual interface reset, right? Uh..."
 
 + A what?
 
@@ -101,19 +103,19 @@ A voice cuts in and out from somewhere nearby. It's dark. Not just lights-off da
 
 + Wh—
 -<>
-+ <center>⚠ INTEGRATION BOOTING. PLEASE WAIT. ⚠</center>
++ <center><< INTEGRATION BOOTING. PLEASE WAIT. >></center>
 -...
-+ <center><b>⚠ INTEGRATION COMPLETE. ⚠</b></center>
++ <center><b><< INTEGRATION COMPLETE. >></b></center>
 - ...
 It hurts a little, but not compared to everything else. Like the twinge of an old bad leg.
 + ...
-- <center>⚠ EXECUTING "REPO.SYS": 98% ⚠</center>
+- <center><< EXECUTING "REPO.SYS": 98% >></center>
 Oh, that's a weird sensation. Maybe your brain was lifted out of a sloshing vat and lowered into its body. All of the nerves are lighting up in an outward ripple like sluggish fairy lights.
 You have a head, and a face, you discover. Then... a torso and limbs, even, in a seated position, which is good. Your arms feel heavy at your sides.
 Then you become aware of your stomach, lungs, and endostasis engine, since they're doing so much work, and then your skeletomuscular schema, pulsing diagnostic data: integrated into your wetware heart, reporting a static 55 BPM, and your dermal feedback weave; your arms, you discover, are cuffed to your sides. Your torso, legs, and arms have all sustained significant damage.
 Your sensory systems come online last. By the time the static whines down to crisp, clear sound, your optic nerves are online.
 
-+ <center>⚠ EXECUTING "REPO.SYS": 99% ⚠</center>
++ <center><< EXECUTING "REPO.SYS": 99% >></center>
 - The woman to the left glances over to where you sit in the passenger seat. "All good now?" she asks tentatively. Her voice is low. Warm, and a little raspy. It has a character far beyond what you were able to understand when it was being parsed into rudimentary speech-to-text data.
 -> start_convo
 
@@ -166,36 +168,16 @@ Your sensory systems come online last. By the time the static whines down to cri
     -> start_convo
 
 === end_loop ===
-+ <center>⚠ FATAL ERROR ⚠</center> 
-- <center>⚠ MEMORY BANK COMPROMISED ⚠</center>
-<center>⚠ INTEGRATION COMPROMISED ⚠</center>
++ <center><< FATAL ERROR >></center> 
+- <center><< MEMORY BANK COMPROMISED >></center>
+<center><< INTEGRATION COMPROMISED >></center>
 
-+ <center>⚠ CONNECTION LOST ⚠</center>
++ <center><< CONNECTION LOST >></center>
 
-- <i>Your endostasis engine... {~\
-      pulses a glittering, heavenly blue|\
-      gives a sharp, songlike trill|\
-      quivers in your chest|\
-      hums... the way a person hums|\
-      hiccups for a single, infinite microsecond|\
-      purrs softly|\
-      does its work|\
-      turns over|\
-      spins to life|\
-      kicks|\
-      beats|\
-      thumps|\
-      pulses|\
-      hiccups|\
-      quivers|\
-      hums|\
-      sputters}.</i> {||\
-      <i>Who were you before this?</i>|\
-      <i>Does the engine ever give up?</i>|\
-      <i>I'm tired.</i>|}
+- <i>Your endostasis engine... {~pulses a glittering, heavenly blue|gives a sharp, songlike trill|quivers in your chest|hums... the way a person hums|hiccups for a single, infinite microsecond|purrs softly|quietly does its work|turns over|spins to life|kicks|beats|thumps|pulses|hiccups|quivers|hums|sputters}.</i>
 ...
 
-+ <center><b>⚠ EXECUTING "REPO.SYS": 90% ⚠</b></center>
++ <center><b><< EXECUTING "REPO.SYS": 90% >></b></center>
     //#IMAGE: newloop.png
     -> new_loop
 
@@ -205,31 +187,19 @@ Your sensory systems come online last. By the time the static whines down to cri
 ~ loops++
 ~ time = -1
 ~ suspicion = 0
-// <center>★ <i>DEBUG: {loops} LOOP(S) COMPLETED</i> ★</center>
-
-// SYSTEM
-// \\\\ Sensory interface active.
-// <center>⚠ SENSORY INTERFACE ACTIVE ⚠</center>
-// {not life_support_on:<center><b>⚠ LIFE SUPPORT INACTIVE ⚠</b></center>}
+// <center>★ <i>DEBUG: {loops} LOOP(S) COMPLETED</i> ★</center>>
 
 
-// "...just keep our heads on straight, I know we can think of something."
 "...to repair. I know they'll  think of <i>something</i>," {know_silvie_name: Silvie|someone} says softly to herself from the driver's seat to the left. {not life_support_on:Everything hurts.}
 
-Your mental console {~\
-    flutters on in your consciousness like a heartbeat.|\
-    sputters into life like a dying star.|\
-    fades in slowly to your mind's eye, like a rattling inhale.|\
-    flickers between bright and dim in your mind's eye.|\
-    lights up obligingly for you, for now.\
-} {know_endostasis:Thanks to your endostasis engine|Somehow}, you are alive.
+Your mental console {~flutters on in your consciousness like a heartbeat.|sputters into life like a dying star.|fades in slowly to your mind's eye, like a rattling inhale.|flickers between bright and dim in your mind's eye.|lights up obligingly for you, for now.} {know_endostasis:Thanks to your endostasis engine|Somehow}, you are alive.
 -> menu
 
 
 === menu ===
 // TODO: add environmental/changing stuff according to time; function?
 {check_time(): -> end_loop}
-{time >= 1: <center>⚠ EXECUTING "REPO.SYS": 9{time}% ⚠<center>}
+{time >= 1: <center><< EXECUTING "REPO.SYS": 9{time}% >><center>}
 
 + [Look.]
     -> look
@@ -251,7 +221,7 @@ To your left, a woman is driving. She looks a little frantic, biting her lip.
 
 = look_menu
 {check_time(): -> end_loop}
-{time >= 1: <center>⚠ EXECUTING "REPO.SYS": 9{time}% ⚠<center>}
+{time >= 1: <center><< EXECUTING "REPO.SYS": 9{time}% >><center>}
 + [Look around the car.]You look around the interior of the car.
     It's an old car, the kind with an asynchronous clock, a wheel, and no direct interface, and the style reflects it: cozy, worn fabric interiors, complete with weird stains on the seats here and there. There's a biomech kit on the dashboard, a plastic bag full of plastic bags at your feet, and a "beach day"-scented car freshener hanging on for dear life from the rear view mirror.
     A whole lot of nothing has carefully been placed in your reach.
@@ -324,7 +294,8 @@ To your left, a woman is driving. She looks a little frantic, biting her lip.
         She nods vaguely as she steers the car around a long curve.
     ~ know_silvie_name = true
     -> look_arm
-+ (arm_clues)[What are the pictures of?]
++ [What are the pictures of?]
+    ~ arm_clues = true
     There are two pictures:
     1.) Some kind of... rat in a sphere?
     2.) A... star in a cup? Or an arrow going into a lake, maybe?
@@ -355,7 +326,7 @@ To your left, a woman is driving. She looks a little frantic, biting her lip.
     -> silvie_death
 * "What's happening?"
     -> silvie_death
-+ (arm_clues) "Guess what these images are." [(Show her your arm.)]You show her your arm.
++ {arm_clues} "Guess what these images are." [(Show her your arm.)]You show her your arm.
     -> talk_arm
 + {know_jacket_pocket} "I need what's in your pocket now."
     -> jacket_pocket
@@ -384,10 +355,11 @@ She hesitates, but glances down, a little. "Why?" she asks.
 + {not silvie_passcode} The rat in a sphere, or whatever.
     "Oh," she says, like she's startled, and snorts. All the tension rushes out of her for a split second. "Is this your best attempt at <b>Laika in Earth's orbit</b>?"
     In the same way that you can feel a key sliding home in a lock, that phrase felt, in your mind, like a <b>passcode</b>.
+    ++ (rem_laika) You remember: <b>Laika in Earth's orbit</b>.
     ~ silvie_passcode = true
-    ++ "You know my arms are basically broken?"
+    +++ {rem_laika} "You know my arms are basically broken?"
         She rolls her eyes at you.
-    ++ Stay silent.
+    +++ {rem_laika} Stay silent.
         Yeah, better safe than sorry, maybe.
 + {not savin_bak_passcode} The star in a cup, possibly.
     "You're getting better at that," she says.
@@ -396,8 +368,9 @@ She hesitates, but glances down, a little. "Why?" she asks.
     ++ "Well, I'm glad you recognized it."
         "<b>Seriously, fuck pureblue</b>."
         Pureblue? A company logo, maybe?
-        ~ savin_bak_passcode = true
-        -> talk_arm_clues
+        +++ You remember: <b>seriously fuck pure blue</b>.
+            ~ savin_bak_passcode = true
+            -> talk_arm_clues
 + [Nothing now.]
     -> talk
 - <>
@@ -455,6 +428,8 @@ You can see something peeking out of the jacket pocket in question.
 + [Open the paper.]
 - It says, "<b>If you're reading this, sorry</b>."
 ~ superuser_passcode = true
++ You remember: <b>If you're reading this, sorry</b>.
+- <>
 + [Did I write that for her?]
 + [Or did I write that for me?]
 - <>
@@ -478,7 +453,7 @@ You can see something peeking out of the jacket pocket in question.
 ~ time++
 {
     - time >= 10:
-        <center>⚠ EXECUTING "REPO.SYS": COMPLETE. ⚠</center>
+        <center><< EXECUTING "REPO.SYS": COMPLETE. >></center>
         ~ return true
     - else:
         ~ return false
@@ -559,7 +534,7 @@ You can see something peeking out of the jacket pocket in question.
         +++ Never mind.
         -> issues_mem_menu
     ++ {not memory_pureblue} > pureblue.h
-        +++ {pureblue_passcode} [Unblock partition with passcode "<b>quit digging</b>".]"<b>Quit digging.</b>."
+        +++ {pureblue_passcode} [Unblock partition with passcode "<b>quit digging</b>".]"<b>Quit digging</b>."
             <center><b>Memory partition "pureblue.h" unblocked.</b></center>
             ~ memory_pureblue = true
             -> issues_mem_menu
@@ -712,7 +687,7 @@ Sure. Clean.
         - know_savin_name:
             <i>Changelog: User </i>Savin<i> set active user to </i>Savin.
         - else:
-            <i>Changelog: User </i>REPO<i> set active user to </i>a^ymEt0a8&*oP.
+            <i>Changelog: User </i>LOVE<i> set active user to </i>a^ymEt0a8&*oP.
     }
     -> sysinfo_menu
 + [(Return to console.)]
@@ -801,9 +776,9 @@ Sure. Clean.
 // You end the time loop, for better or for worse.
 {
     - virus_removed:
-        <center>⚠ SYSTEM RECOVERY COMPLETE. ⚠ </center> #system
+        <center><< SYSTEM RECOVERY COMPLETE. >> </center> #system
     - else:
-        <center>⚠ SYSTEM RECOVERY ENDED. ⚠ </center> #system
+        <center><< SYSTEM RECOVERY CANCELLED. >> </center> #system
 }
 
 {know_silvie_name:Silvie|The woman to your left} levels you with a look. The hope on her face is almost painful in its plainness. "The spinning light just went off..."

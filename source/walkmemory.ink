@@ -15,7 +15,7 @@ There's just... one?
     -> walk_passcodes_menu
 + [> exit]<i>Exiting partition passcodes.h.</i>
     {check_time(): -> end_loop}
-    {time >= 1: <center>⚠ EXECUTING "REPO.SYS": 9{time}% ⚠<center>}
+    {time >= 1: <center><< EXECUTING "REPO.SYS": 9{time}% >><center>}
     ->->
 
 //
@@ -34,7 +34,7 @@ There's just... one?
     -> home_19
 + [> exit]<i>Exiting partition silvie.h.</i>
     {check_time(): -> end_loop}
-    {time >= 1: <center>⚠ EXECUTING "REPO.SYS": 9{time}% ⚠<center>}
+    {time >= 1: <center><< EXECUTING "REPO.SYS": 9{time}% >><center>}
     ->->
     
 = meeting_at_laika // meeting her at the biomechanic shop that does jailbreaking shit, laika joke
@@ -54,7 +54,8 @@ There's just... one?
     <i>"You really didn't have to do this," you say, to follow the script, but you know as well as she did that she wouldn't have invited you to her own home if she didn't like you and she wouldn't like you if she didn't trust you.</i>
     <i>"I'm happy to work late for you," she says. Her eyes crinkle with a smile. "I mean, it's all kind of fucked up, isn't it? It's not like... like spreadsheet software. They should fix bugs."</i>
     <i>"<b>Would, could, should</b>..." She gestures you down into her worn kitchen chair, and you transfer your weight into it delicately. It's not like you're made of air.</i>
-    <i>She pulls your hair up off your nape into a ponytail; she has a gentle touch, well-suited to this kind of bio work. You open the hardware port through your console. "Pretty," she hums, reaching for the connective cord to her interpreter.</i>
+    + You remember: <b>would, could, should</b>.
+    - <i>She pulls your hair up off your nape into a ponytail; she has a gentle touch, well-suited to this kind of bio work. You open the hardware port through your console. "Pretty," she hums, reaching for the connective cord to her interpreter.</i>
     <i>"My port?" you say, bemused.</i>
     <i>"Your hair," she says. "You. You know. The whole effect. You should wear it up more, if you don't mind it."</i>
     <i>"It's fake," you say.</i>
@@ -68,7 +69,8 @@ There's just... one?
     <i>"Silvie..."</i>
     <i>"Don't 'Silvie' me," she snaps. You withdraw, giving her space. "Quit? Like you? You just going to quit? Quit organizing, <b>quit digging</b>, quit your work on</i> pureblue<i>, quit your work on </i>purengine, cyanoctrl, <i>the lobbyists..."</i>
     <i>"Okay," you say. "Sorry I said anything."</i>
-    <i>She closes her eyes and visibly centers herself. "It's fine. Sorry. I've always... it's everything, not just this."</i>
+    + You remember: <b>quit digging</b>.
+    - <i>She closes her eyes and visibly centers herself. "It's fine. Sorry. I've always... it's everything, not just this."</i>
     <i>Visibly calmer, you decide it's safe to move back in closer. She scoots in closer; she tends to gravitate to your natural warmth like a cat. You are saving this observation to make fun of her later, but somehow she still sees amusement somewhere in your face.</i>
     <i>"I'm going to smack you," she says. "Legitimately."</i>
     <i>"You're gonna hurt your damn hand again, is what you're gonna do."</i>
@@ -93,7 +95,7 @@ There's just... one?
     -> bak_passphrase
 + [> exit]<i>Exiting partition savin.h.bak.</i>
     {check_time(): -> end_loop}
-    {time >= 1: <center>⚠ EXECUTING "REPO.SYS": 9{time}% ⚠<center>}
+    {time >= 1: <center><< EXECUTING "REPO.SYS": 9{time}% >><center>}
     ->->
 
 = lovesys_logs
@@ -117,8 +119,8 @@ There's just... one?
 <i>>> Command overridden.</i>
 <i>> admin sys integration kill</i>
 <i>> admin sys integration purge</i>
-<i><center>⚠ BODILY INTEGRATION ISSUES DETECTED ⚠<center></i>
-<i><center>⚠ MEMORY BANK INTEGRATION ISSUES DETECTED ⚠<center></i>
+<i><center><< BODILY INTEGRATION ISSUES DETECTED >><center></i>
+<i><center><< MEMORY BANK INTEGRATION ISSUES DETECTED >><center></i>
 <i>> sys edit passcodes.h</i>
 <i>> sys recovery init</i>
 <i>>> ...</i>
@@ -150,11 +152,12 @@ There's just... one?
 <i>She works her jaw silently.</i>
 <i>"The spinning light," you say, leaning back to indicate the lights along the nape of your neck, "is going to indicate that I'm in system recovery. When it goes off, you need to ask me for that passphrase."</i>
 ~ ending_passcode = true
++ You remember: <b>I love Silvie to the moon and back</b>.
 -> walk_savin_bak_menu
 
 //
 === walkmemory_pureblue ===
-// UNCOVERING OF PUREBLUE AND REPO.SYS
+// UNCOVERING OF PUREBLUE AND repo.sys
 <center><i>Accessing partition pureblue.h.</i></center>
 
 \/\/ <i>Description</i>: "DO NOT DELETE" (<i>last updated by</i> Savin<i> at </i>4h ago)
@@ -175,7 +178,7 @@ The names aren't very helpful, but timestamps are flagged. {know_savin_name:You 
     -> walk_file_2
 + [> exit]<i>Exiting partition pureblue.h.</i>
     {check_time(): -> end_loop}
-    {time >= 1: <center>⚠ EXECUTING "REPO.SYS": 9{time}% ⚠<center>}
+    {time >= 1: <center><< EXECUTING "REPO.SYS": 9{time}% >><center>}
     ->->
 
 
