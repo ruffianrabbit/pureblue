@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
+    # font-weight: lighter;
     background: white;
     overflow: hidden;
 }
@@ -108,12 +108,12 @@ p {
     font-size: 13pt;
     color: #888;
     line-height: 1.7em;
-    font-weight: lighter;
+    # font-weight: lighter;
 }
 
 a {
-    font-weight: 700;
-    color: #b97c2c;
+    # font-weight: 700;
+    color: #25adff;
     font-family: sans-serif;
     transition: color 0.6s;
     text-decoration: none;
@@ -237,7 +237,7 @@ body.dark {
 }
 
 .dark a {
-    color: #cc8f1a;
+    color: #25adff;
     transition: color 0.6s;
 }
 
