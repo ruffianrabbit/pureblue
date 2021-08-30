@@ -34,18 +34,16 @@ VAR network_passcode = false // blue heart nomad castle
 VAR ending_passcode = false // I love Silvie to the moon and back
 VAR superuser_passcode = false // fiction maenad rosemary key; enables deletion of love.sys
 VAR master_passcode = false // seriously fvck pure blue; accesses passcodes.h
-VAR silvie_passcode = false // laika achieved spaceflight first
-VAR savin_bak_passcode = false // quick as you can
-VAR savin_user_passcode = false // cherubim garam masala butch
-VAR pureblue_passcode = false // prometheus or the vulture
-VAR fake_phrase = false // look in silvie's pocket; for superuser
+VAR silvie_passcode = false // 
+VAR savin_bak_passcode = false // 
+VAR pureblue_passcode = false // 
+VAR fake_phrase = false // look in silvie's pocket
 VAR superuser_phrase = false
 
 // Memories
 VAR memory_passcodes = false // your lastpass (tm) account
 VAR memory_silvie = false // contains romance option; optional(?)
 VAR memory_savin_bak = false // contains what happened directly before this, including pass phrase for ending
-VAR memory_savin_user = false // 
 VAR memory_pureblue = false // contains stolen data
 
 // Known facts: know_*
@@ -342,10 +340,6 @@ To your left, a woman is driving. She looks a little frantic, biting her lip.
 
 === talk ===
 
-* DEBUG
-    ~ know_jacket_pocket = true
-    ~ know_laika = true
-    -> talk
 * "Thank you for fixing my integration."
     She squints out the windshield. The rain is coming down hard. "What do you mean?"
     Her throat moves with a swallow; she's nervous.
@@ -397,11 +391,13 @@ She hesitates, but glances down, a little. "Why?" she asks.
         Yeah, better safe than sorry, maybe.
 + {not savin_bak_passcode} The star in a cup, possibly.
     "You're getting better at that," she says.
-    ** "At what?"
+    ** "But what is it?"
         -> silvie_death
     ++ "Well, I'm glad you recognized it."
         "<b>Seriously, fuck pureblue</b>."
+        Pureblue? A company logo, maybe?
         ~ savin_bak_passcode = true
+        -> talk_arm_clues
 + [Nothing now.]
     -> talk
 - <>
@@ -562,24 +558,6 @@ You can see something peeking out of the jacket pocket in question.
             -> issues_mem_menu
         +++ Never mind.
         -> issues_mem_menu
-    ++ {not memory_savin_user} > savin.user
-        +++ {savin_user_passcode} [Try passcode "<b>cherubim garam masala butch</b>".]"<b>Cherubim garam masala butch</b>."
-            <center><b>Memory partition "savin.user" unblocked.</b></center>
-            ~ memory_savin_user = true
-            -> issues_mem_menu
-        *** {silvie_passcode and not memory_silvie} [Try passcode "<b>laika in earth's orbit</b>".]"<b>Laika in Earth's orbit</b>."
-            <center><b>No match.</b></center>
-            Eugh, there's a backlash associated. That <i>smarts</i>.
-            -> issues_mem_menu
-        *** {savin_bak_passcode and not memory_savin_bak} [Try passcode "<b>seriously fuck pure blue</b>".]"<b>Seriously, fuck pureblue</b>."
-            <center><b>No match.</b></center>
-            Eugh, there's a backlash associated. That <i>smarts</i>.
-            -> issues_mem_menu
-        *** {master_passcode and not memory_passcodes} [Try passcode "<b>could would should</b>".]"<b>Could, would, should.</b>."
-            <center><b>No match.</b></center>
-            -> issues_mem_menu
-        +++ Never mind.
-        -> issues_mem_menu
     ++ {not memory_pureblue} > pureblue.h
         +++ {pureblue_passcode} [Unblock partition with passcode "<b>quit digging</b>".]"<b>Quit digging.</b>."
             <center><b>Memory partition "pureblue.h" unblocked.</b></center>
@@ -629,7 +607,8 @@ You can see something peeking out of the jacket pocket in question.
     That's...
     That's, um... a bit of a strange feeling—
     -> end_loop
-+ {superuser_phrase} "<b>If you're reading this, sorry.</b>"
++ {superuser_passcode} "<b>If you're reading this, sorry.</b>"
+    <center><b>> Superuser access granted to user Savin.</b></center>
     -> win_con
 ~ issue_lovesys_fixed = true
 -> issues
@@ -715,7 +694,7 @@ Sure. Clean.
 * [sysinfo network.log]<center><i>\\\\ sysinfo network.log</i></center>
     Your network access is down. The most recent manual log note reads:
     <i>User </i>Savin<i> set network to </i>inactive<i>. Reason(s) cited: "security, DO NOT UNLOCK".</i>
-    {not know_savin_name:You don't know the user, though it sounds familiar (maybe you could ask about it?), and r|R}eactivating the network would require the unique passcode.
+    // {not know_savin_name:You don't know the user, though it sounds familiar (maybe you could ask about it?), and r|R}eactivating the network would require the unique passcode.
     ~ q_who_savin = true
     ++ {network_passcode} The passcode is <b>blue heart nomad castle</b>.
         // Add network?
@@ -773,7 +752,6 @@ Sure. Clean.
 - <i>> Partition blocked:</i> passcodes.h
 <i>> Partition blocked:</i> silvie.h
 <i>> Partition blocked:</i> savin.h.bak
-<i>> Partition blocked:</i> savin.user
 <i>> Partition blocked:</i> pureblue.h
 
 + [Leave.]
@@ -798,7 +776,7 @@ Sure. Clean.
 
 = walkmemory
 <center><i>> walkmemory cannot undergo time compression.</i></center>
-{not memory_passcodes and not memory_silvie and not memory_savin_bak and not memory_savin_user and not memory_pureblue:
+{not memory_passcodes and not memory_silvie and not memory_savin_bak and not memory_pureblue:
     No unarchived partitions are available to walk. <i>If this is unintentional, or you are seeing this message but do not know what it means, please immediately file a report with your memory bank specifications attached to</i> pureblue.
 }
 -> walkmemory_menu
@@ -813,8 +791,6 @@ Sure. Clean.
     -> walkmemory_silvie ->
 + {memory_savin_bak} <center><i>> walkmemory savin.h.bak</i></center>
     -> walkmemory_savin_bak ->
-+ {memory_savin_user} <center><i>> walkmemory savin.user</i></center>
-    -> walkmemory_savin_user ->
 + {memory_pureblue} <center><i>> walkmemory pureblue.h</i></center>
     -> walkmemory_pureblue ->
 + [Nothing for now.]You step back to the console.
@@ -822,7 +798,6 @@ Sure. Clean.
 - -> walkmemory_menu
 
 === ending ===
-<center>⚠ SYSTEM RECOVERY COMPLETE. ⚠ </center> #system
 // You end the time loop, for better or for worse.
 {
     - virus_removed:
@@ -832,6 +807,8 @@ Sure. Clean.
 }
 
 {know_silvie_name:Silvie|The woman to your left} levels you with a look. The hope on her face is almost painful in its plainness. "The spinning light just went off..."
+    "It's okay. Pull over the car," you say.
+    She does. Every second is drawn out like taffy, the tires grinding on every stray piece of gravel.
 {
     - not virus_removed:
         -> bad_end
@@ -843,7 +820,6 @@ Sure. Clean.
 
 = bad_end // currently firewalled
 + "The system recovery is done."
-- She brakes, and draws the car to the shoulder of the highway.
 // { // currently firewalled
 //     - memory_bank_active:
 //          You watch her do it. She's going to test you—make sure you're still you. She brakes, parks, pulls the emergency brake even. The headlights reflect yellow light into the cab.
@@ -856,7 +832,7 @@ Sure. Clean.
 
 = dead_end // currently firewalled
 // Ending: You're hacked, but they don't have memory bank access
-Her pistol is pressed flush to your chest.
+- Her pistol is pressed flush to your chest.
 "Your phrase," she demands. The metal chills your skin even through the shirt.
 
 + "What phrase?"[]
@@ -898,7 +874,7 @@ She abruptly shoves the pistol hard into your chest and there is a ringing—and
 Her pistol is pressed flush to your chest.
 "Your phrase," she demands. The metal chills your skin even through the shirt.
 
-+ {ending_passcode} "It's... embarrassing. It's, uh..."
++ {ending_passcode} You have it.
 + (guess) [I don't know the phrase. Should I guess?]
 + (convince) [I can convince her—tell her about my memory bank.]
 - "<b>I love Silvie to the moon and back</b>," you say, confidently enough to soothe her but softly enough that she lowers the pistol a single trembling inch. "I still think it's silly."
@@ -953,7 +929,7 @@ Your hands twitch a little, as the first cuff comes off. Cyborgs don't twitch, n
 
 = amnesia_end //firewalled
 // Ending: You removed the virus but your memories are locked
-TODO: amnesia end
+// TODO: amnesia end
 -> END
 
 = good_end
@@ -965,13 +941,13 @@ TODO: amnesia end
 "Trigger safety," you say, which feels bizarre when she's starting to cry in front of you. You take it and set it aside, on the dash.
 "Let me get you out," she's mumbling.
 "No point. I still need repairs."
-"Was this even worth it?" Silvie asks. She's already wiping her tears away on the backs of her palms, hiding her face, settling her hands back on the wheel. If you had a nonregulated heart, maybe it would hiccup with fondness.
+"Was this even worth it?" Silvie asks. Oh, you've stressed her out so much. She's already wiping her tears away on the backs of her palms, hiding her face, settling her hands back on the wheel. She's made of steady stuff, but you think she also just hates to be in pain if she thinks you've got dibs. If you had a nonregulated heart, maybe it would hiccup with fondness.
 
-+ {file_1 and file_2} I have proof. 
-+ {memory_pureblue} I have the files.
-+ {file_1 and file_2 and memory_pureblue} I've got everything.
-+ {not file_1 and not file_2 and not memory_pureblue} The files are all gone.
-- Time spins out obligingly long. The two of you are alone in the cab.
++ {file_1 and file_2} "I have proof.["] they did this," you say, tilting your chin toward you knees. "It's a start. It's a <i>step</i>."
++ {memory_pureblue} "I have the files.["] I have what I went in for."
++ {file_1 and file_2 and memory_pureblue} "I've got everything.["] More than I even thought I'd get."
++ {not file_1 and not file_2 and not memory_pureblue} "The files are all gone."
+- Time spins out, uncompressed. The two of you are alone.
 
 -> END
 
