@@ -15,7 +15,7 @@ There's just... one?
     -> walk_passcodes_menu
 + [> exit]<i>Exiting partition passcodes.h.</i>
     {check_time(): -> end_loop}
-    {time >= 1: <center>⚠ EXECUTING "LOTSOFLOVE.SYS": 9{time}% ⚠<center>}
+    {time >= 1: <center>⚠ EXECUTING "REPO.SYS": 9{time}% ⚠<center>}
     ->->
 
 //
@@ -34,7 +34,7 @@ There's just... one?
     -> home_19
 + [> exit]<i>Exiting partition silvie.h.</i>
     {check_time(): -> end_loop}
-    {time >= 1: <center>⚠ EXECUTING "LOTSOFLOVE.SYS": 9{time}% ⚠<center>}
+    {time >= 1: <center>⚠ EXECUTING "REPO.SYS": 9{time}% ⚠<center>}
     ->->
     
 = meeting_at_laika // meeting her at the biomechanic shop that does jailbreaking shit, laika joke
@@ -85,7 +85,7 @@ There's just... one?
 -> walk_savin_bak_menu
 
 = walk_savin_bak_menu
-+ [> love.sys logs]<center><i>> love.sys</i></center>
++ [> repo.sys logs]<center><i>> repo.sys</i></center>
     -> lovesys_logs
 + [> sensory logs]<center><i>> sensory logs</i></center>
     -> sensory_logs
@@ -93,25 +93,25 @@ There's just... one?
     -> bak_passphrase
 + [> exit]<i>Exiting partition savin.h.bak.</i>
     {check_time(): -> end_loop}
-    {time >= 1: <center>⚠ EXECUTING "LOTSOFLOVE.SYS": 9{time}% ⚠<center>}
+    {time >= 1: <center>⚠ EXECUTING "REPO.SYS": 9{time}% ⚠<center>}
     ->->
 
 = lovesys_logs
-<i>> from pureblue.h unpack love.sys</i>
+<i>> from pureblue.h unpack repo.sys</i>
 <i>> admin walkmemory pureblue.h</i>
 <i>> stop</i>
 <i>>> Command overridden.</i>
 <i>> admin walkmemory savin.user</i>
 <i>> stop</i>
 <i>>> Command overridden.</i>
-<i>> kill love.sys</i>
-<i>>> "love.sys" did not respond.</i>
+<i>> kill repo.sys</i>
+<i>>> "repo.sys" did not respond.</i>
 <i>> admin walkmemory passcodes.h</i>
 <i>> stop</i>
 <i>>> Command overridden.</i>
-<i>>> "love.sys" has been identified as possible malicious software. Log?</i>
+<i>>> "repo.sys" has been identified as possible malicious software. Log?</i>
 <i>> y</i>
-<i>>> "love.sys" has been flagged as malicious</i>
+<i>>> "repo.sys" has been flagged as malicious</i>
 <i>> admin sysinfo integration.log</i>
 <i>> stop</i>
 <i>>> Command overridden.</i>
@@ -154,7 +154,7 @@ There's just... one?
 
 //
 === walkmemory_pureblue ===
-// UNCOVERING OF PUREBLUE AND LOVE.SYS
+// UNCOVERING OF PUREBLUE AND REPO.SYS
 <center><i>Accessing partition pureblue.h.</i></center>
 
 \/\/ <i>Description</i>: "DO NOT DELETE" (<i>last updated by</i> Savin<i> at </i>4h ago)
@@ -175,7 +175,7 @@ The names aren't very helpful, but timestamps are flagged. {know_savin_name:You 
     -> walk_file_2
 + [> exit]<i>Exiting partition pureblue.h.</i>
     {check_time(): -> end_loop}
-    {time >= 1: <center>⚠ EXECUTING "LOTSOFLOVE.SYS": 9{time}% ⚠<center>}
+    {time >= 1: <center>⚠ EXECUTING "REPO.SYS": 9{time}% ⚠<center>}
     ->->
 
 
@@ -206,7 +206,7 @@ The names aren't very helpful, but timestamps are flagged. {know_savin_name:You 
 
 = pureblue_2
     This section of memory is... weird. You think it was flagged incorrectly. The sensory data flickers in and out, flashing mostly black and blue.
-    It's possible that love.sys got to this before you could activate system recovery.
+    It's possible that repo.sys got to this before you could activate system recovery.
     ** <center><i>> exit</center></i>
         -> walkmemory_pureblue
 
@@ -238,7 +238,7 @@ The names aren't very helpful, but timestamps are flagged. {know_savin_name:You 
         -> walkmemory_pureblue
 
 = walk_file_2
-// info on love.sys
+// info on repo.sys
     You're pretty sure this is something like a whitepaper for repo.sys. As described, it is a system that repossesses errant registered users of the <i>pureblue</i> OS on approved hardware by taking intelligent control of their bodily integration, and disables them if they resist, for such stated goals as "stopping criminals" and "enforcing behavior as described by the <i>pureblue</i> OS license agreement".
     ~ file_2 = true
     -> file_2_menu

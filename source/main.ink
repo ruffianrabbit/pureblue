@@ -32,7 +32,7 @@ VAR issue_recovery_fixed = false
 // Passcodes
 VAR network_passcode = false // blue heart nomad castle
 VAR ending_passcode = false // I love Silvie to the moon and back
-VAR superuser_passcode = false // fiction maenad rosemary key; enables deletion of love.sys
+VAR superuser_passcode = false // fiction maenad rosemary key; enables deletion of repo.sys
 VAR master_passcode = false // seriously fvck pure blue; accesses passcodes.h
 VAR silvie_passcode = false // 
 VAR savin_bak_passcode = false // 
@@ -107,13 +107,13 @@ A voice cuts in and out from somewhere nearby. It's dark. Not just lights-off da
 - ...
 It hurts a little, but not compared to everything else. Like the twinge of an old bad leg.
 + ...
-- <center>⚠ EXECUTING "LOTSOFLOVE.SYS": 98% ⚠</center>
+- <center>⚠ EXECUTING "REPO.SYS": 98% ⚠</center>
 Oh, that's a weird sensation. Maybe your brain was lifted out of a sloshing vat and lowered into its body. All of the nerves are lighting up in an outward ripple like sluggish fairy lights.
 You have a head, and a face, you discover. Then... a torso and limbs, even, in a seated position, which is good. Your arms feel heavy at your sides.
 Then you become aware of your stomach, lungs, and endostasis engine, since they're doing so much work, and then your skeletomuscular schema, pulsing diagnostic data: integrated into your wetware heart, reporting a static 55 BPM, and your dermal feedback weave; your arms, you discover, are cuffed to your sides. Your torso, legs, and arms have all sustained significant damage.
 Your sensory systems come online last. By the time the static whines down to crisp, clear sound, your optic nerves are online.
 
-+ <center>⚠ EXECUTING "LOTSOFLOVE.SYS": 99% ⚠</center>
++ <center>⚠ EXECUTING "REPO.SYS": 99% ⚠</center>
 - The woman to the left glances over to where you sit in the passenger seat. "All good now?" she asks tentatively. Her voice is low. Warm, and a little raspy. It has a character far beyond what you were able to understand when it was being parsed into rudimentary speech-to-text data.
 -> start_convo
 
@@ -195,7 +195,7 @@ Your sensory systems come online last. By the time the static whines down to cri
       <i>I'm tired.</i>|}
 ...
 
-+ <center><b>⚠ EXECUTING "LOTSOFLOVE.SYS": 90% ⚠</b></center>
++ <center><b>⚠ EXECUTING "REPO.SYS": 90% ⚠</b></center>
     //#IMAGE: newloop.png
     -> new_loop
 
@@ -229,7 +229,7 @@ Your mental console {~\
 === menu ===
 // TODO: add environmental/changing stuff according to time; function?
 {check_time(): -> end_loop}
-{time >= 1: <center>⚠ EXECUTING "LOTSOFLOVE.SYS": 9{time}% ⚠<center>}
+{time >= 1: <center>⚠ EXECUTING "REPO.SYS": 9{time}% ⚠<center>}
 
 + [Look.]
     -> look
@@ -251,7 +251,7 @@ To your left, a woman is driving. She looks a little frantic, biting her lip.
 
 = look_menu
 {check_time(): -> end_loop}
-{time >= 1: <center>⚠ EXECUTING "LOTSOFLOVE.SYS": 9{time}% ⚠<center>}
+{time >= 1: <center>⚠ EXECUTING "REPO.SYS": 9{time}% ⚠<center>}
 + [Look around the car.]You look around the interior of the car.
     It's an old car, the kind with an asynchronous clock, a wheel, and no direct interface, and the style reflects it: cozy, worn fabric interiors, complete with weird stains on the seats here and there. There's a biomech kit on the dashboard, a plastic bag full of plastic bags at your feet, and a "beach day"-scented car freshener hanging on for dear life from the rear view mirror.
     A whole lot of nothing has carefully been placed in your reach.
@@ -478,7 +478,7 @@ You can see something peeking out of the jacket pocket in question.
 ~ time++
 {
     - time >= 10:
-        <center>⚠ EXECUTING "LOTSOFLOVE.SYS": COMPLETE. ⚠</center>
+        <center>⚠ EXECUTING "REPO.SYS": COMPLETE. ⚠</center>
         ~ return true
     - else:
         ~ return false
@@ -509,9 +509,9 @@ You can see something peeking out of the jacket pocket in question.
         <i>No issues tracked.</i>
         -> console
 }
-+ {issue_lovesys and not issue_lovesys_fixed} <b>Issue:</b> love.sys causing system instabilities
-    <center><i>> Unauthorized system executable "love.sys" appears to be making unauthorized changes to system settings.</i></center>
-    ++ {superuser_passcode or fake_phrase} [Override love.sys as superuser.]
++ {issue_lovesys and not issue_lovesys_fixed} <b>Issue:</b> repo.sys causing system instabilities
+    <center><i>> Unauthorized system executable "repo.sys" appears to be making unauthorized changes to system settings.</i></center>
+    ++ {superuser_passcode or fake_phrase} [Override repo.sys as superuser.]
         -> solve_lovesys
     ++ Stop tracking this issue.
         ~ issue_lovesys = false
@@ -712,7 +712,7 @@ Sure. Clean.
         - know_savin_name:
             <i>Changelog: User </i>Savin<i> set active user to </i>Savin.
         - else:
-            <i>Changelog: User </i>LOVE<i> set active user to </i>a^ymEt0a8&*oP.
+            <i>Changelog: User </i>REPO<i> set active user to </i>a^ymEt0a8&*oP.
     }
     -> sysinfo_menu
 + [(Return to console.)]
@@ -728,10 +728,10 @@ Sure. Clean.
 }
 <center><i>Your endostasis engine has identified the following instabilities.</i></center>
 
-+ <center><b> Security issue found: love.sys</b></center>
-- <i>> System executable "love.sys" seems to be performing unapproved changes to system settings.</i>
-<i>> System executable "love.sys" is attempting to access blocked memory banks.</i>
-<i>> System executable "love.sys" seems to be attempting remote system control.</i>
++ <center><b> Security issue found: repo.sys</b></center>
+- <i>> System executable "repo.sys" seems to be performing unapproved changes to system settings.</i>
+<i>> System executable "repo.sys" is attempting to access blocked memory banks.</i>
+<i>> System executable "repo.sys" seems to be attempting remote system control.</i>
 + Yeah, that's probably fine.[] No big deal.
     You step back to the console.
     -> sysinfo_menu
