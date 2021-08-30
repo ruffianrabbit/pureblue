@@ -1,2 +1,3 @@
-# inkjam-2021
-NOW EXECUTING LOVE.SYS. An entry for Inkjam 2021.
+# pureblue
+* [This game can be found on itch.io](https://ruffianrabbit.itch.io/pureblue)...
+* ...or played however you like from the source files.
